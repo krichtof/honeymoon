@@ -13,3 +13,4 @@ timezone: Europe/Paris
 
 # Build settings
 markdown: kramdown
+destination: ../honeymoon
