@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include menu.html %}
+
+    <div id="fullpage" class="fullpageDisable"></div>
+    <!--Container Wrapper Start-->
+    <div class="container-wrapper">
+      {{ content }}
+      {% include footer.html %}
+    </div>
+    <!--Container Wrapper End-->
+
+
+    {% include javascripts.html %}
+
+
+  </body>
+
+</html>

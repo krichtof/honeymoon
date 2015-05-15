@@ -1,0 +1,103 @@
+---
+layout: default
+thumbnail: yosemitea2.jpg
+title: Accueil
+---
+<!--Single Page Header Start-->
+<div class="page-header" data-bg-color="#212121" data-image-src="{{ "/images/posts/" | append: page.thumbnail | prepend: site.baseurl }}">
+	<div class="fit-screen-wrap">
+        <div class="container">
+            <div class="page-header-wrap animate-fadeIn">
+                <h2 class="featured-area-title">HoneyMoon à <span data-color="#00acc1">San Francisco</span></h2>
+                <div data-height="30"></div>
+                <div class="featured-area-subtitle">
+                    Le bonheur à l'état brut d'Alexandra et Christophe. Tout simplement.
+                </div>
+                <div>
+                  Paris - San Francisco - Yosemite National Park
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" data-bg-color="#212121" data-opacity="0.5"></div>
+</div>
+<!--Single Page Header End-->
+
+<div class="page-sidebar" data-midnight="darkColor">
+	<div class="container nopadding">
+    	<div class="page-sidebar-wrapper">
+        	
+            <!--Content Section Start-->
+            <div class="content-wrapper">
+            	<div class="inner-wrapper">
+                {% for post in site.posts %}
+
+                <!--Blog Entry 1 Start-->
+                <div class="blog-entry">
+                	
+                    <!--Blog Thumbnail-->
+                    <div class="blog-entry-thumbnail ripple">
+                    	<a href="{{ post.url | prepend: site.baseurl }}">
+                        	<figure>
+                            	<div class="thumbnail-hover"></div>
+                            	<img src="{{ "/images/posts/" | append: post.thumbnail | prepend: site.baseurl }}" alt="blog entry" />
+                            </figure>
+                        </a>
+                    </div>
+                    
+                    <!--Blog Title and Meta-->
+                    <div class="blog-entry-title">
+                    	<div class="post-date">
+                        	<div class="date-wrap">
+                            	<span>{{ post.date | date: "%d" }}</span>MAI
+                            </div>
+                        </div>
+                        <div class="post-title">
+                        	<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                            <div class="blog-meta number">
+                                <ul>
+                                    <li><a href="#">Blah</a></li>
+                                    <li><a href="#">Jour {{ post.day_which }}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--Blog Description-->
+                    <div class="blog-entry-description">
+                    	{{ post.excerpt }}
+                    </div>
+                    
+                </div>
+                <!--Blog Entry 1 End-->
+                {% endfor %}
+              </div>
+          </div>
+          <!--Content Section End-->
+
+
+                            <!--Pagination For Small Devices Start-->
+                            <div class="pagination-wrapper small-devices">
+                                <div class="container">
+                                    <nav class="pagination">
+                                        <ul>
+                                            <li class="pagination-active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!--Pagination For Small Devices End-->
+
+                            <div class="box-divider"></div>
+
+                            {% include sidebar.html %}
+
+                        </div>
+                    </div>
+                </div>
+                <!--Single Page Content Body End-->
+

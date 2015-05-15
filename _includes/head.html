@@ -1,0 +1,61 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+
+<!-- facebook meta tags -->
+<meta property="og:title" content="{{ page.title }}"/>
+<meta property="og:site_name" content="{{ site.title }}"/>
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}"/>
+<meta property="og:type" content="article"/>
+{% if page.thumbnail %}
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ "/images/posts/" | append: page.thumbnail }}"/>
+{% endif %}
+
+<link rel="icon" type="image/png" href="{{ "/images/birds_icon.png" | prepend: site.baseurl }}" />
+
+
+<title>Blog | Wizard Portfolio HTML Template</title>
+
+<!--Bootstrap Element and Grid System-->
+<link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--Main Elements CSS-->
+<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--Font Awesome-->
+<link rel="stylesheet" href="{{ "/fonts/font-awesome-4.3.0/css/font-awesome.min.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--OWL Carousel CSS-->
+<link rel="stylesheet" href="{{ "/bower_components/owl.carousel/assets/owl.carousel.css" | prepend: site.baseurl }}" type="text/css">
+<link rel="stylesheet" href="{{ "/bower_components/owl.carousel/assets/owl.theme.default.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--FlexSlider CSS-->
+<link rel="stylesheet" href="{{ "/bower_components/FlexSlider/flexslider.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--Megafolio CSS-->
+<link rel="stylesheet" href="{{ "/bower_components/megafolio/css/settings.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--FancyBox CSS-->
+<link rel="stylesheet" href="{{ "/bower_components/fancybox/jquery.fancybox.css?v=2.1.5" | prepend: site.baseurl }}" type="text/css">
+
+<!--jQuery Fullpage CSS-->
+<link rel="stylesheet" href="{{ "/css/jquery.fullPage.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--Tootips CSS-->
+<link rel="stylesheet" href="{{ "/bower_components/tooltipster/css/tooltipster.css" | prepend: site.baseurl }}" type="text/css">
+<link rel="stylesheet" href="{{ "/bower_components/tooltipster/css/themes/tooltipster-shadow.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--Tabulous CSS-->
+<link rel="stylesheet" href="{{ "/bower_components/tabulous/tabulous.css" | prepend: site.baseurl }}" type="text/css">
+
+<!--Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300%7COpen+Sans:400,800,700,600,300' rel='stylesheet' type='text/css'>
+
+<!--Color Scheme Setting-->
+<link rel="stylesheet" href="{{ "/css/color.css" | prepend: site.baseurl }}" type="text/css">
+
+</head>

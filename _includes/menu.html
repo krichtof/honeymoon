@@ -1,0 +1,72 @@
+<!--Page Loader-->
+<div class="loader-wrapper">
+	<div class="loader">Loading...</div>
+</div>
+<!--End-->
+
+<!--Main Menu Wrapper Start-->
+<div id="main-menu" class="left">
+
+	<!--Menu Burger-->
+    <div class="nav-open">
+        <a href="/" class="nav-btn" >
+        	<div class="burger-wrap">
+                <div class="menu-burger">
+                    <div class="menu1"></div>
+                    <div class="menu2"></div>
+                    <div class="menu3"></div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    <!--Sidebar Navigation Start-->
+	<div class="sidebar-nav">
+    	<div class="nav-inner-wrap">
+    	
+            <!--Menu Close-->
+            <div class="nav-close">
+                <a href="#" class="nav-btn" data-action="close">
+                    <div class="menu-close">
+                        <div class="menu1"></div>
+                        <div class="menu2"></div>
+                    </div>
+                </a>
+            </div>
+            
+            <!--Logo Start-->
+            <div class="logo">
+                <a href="#">
+                    <img src="{{ "/images/birds_icon.png" | prepend: site.baseurl }}" alt="logo" />
+                </a>
+            </div>
+            <!--Logo End-->
+            
+            <!--Navigation Menu Start-->
+            <nav>
+                <ul class="nav-menu">
+                    <li data-menuanchor="panelBlock1" class="active"><a href="#panelBlock1">Menu One</a></li>
+                    <li data-menuanchor="panelBlock2"><a href="#panelBlock2">Menu Two</a></li>
+                    <li data-menuanchor="panelBlock3"><a href="#panelBlock3">Menu Three</a></li>
+                    <li data-menuanchor="panelBlock4"><a href="#panelBlock4">Menu Four</a></li>
+                    <li data-menuanchor="panelBlock5"><a href="#">Menu Five</a>
+                        <ul>
+                            <li><a href="#">Second Level</a></li>
+                            <li><a href="#">Second Level</a>
+                                <ul>
+                                    <li><a href="#">Third Level</a></li>
+                                    <li><a href="#">Third Level</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!--Navigation Menu End-->
+		
+		</div>
+    </div>
+    <!--Sidebar Navigation End-->
+    
+</div>
+<!--Main Menu Wrapper End-->

@@ -1,0 +1,17 @@
+{% if article_name %}
+<div class="post-author-avatar">
+  <figure>
+    {% if img_url %}
+      <img src="{{img_url}}" alt="Image from Wikipedia" />
+    {% endif %}
+  </figure>
+</div>
+<div class="post-author-detail">
+  <h4>Zoom sur {{ article_name }}</h4>
+    <div class="author-description">
+      <p>{{ code }}
+      </p>
+      <a href="{{wikipedia_url}}">En savoir plus</a>
+    </div>
+</div>
+{% endif %}

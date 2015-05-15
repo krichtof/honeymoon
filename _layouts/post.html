@@ -1,0 +1,125 @@
+---
+layout: default
+---
+
+<!--Single Page Header Start-->
+<div class="page-header-featured" data-bg-color="#212121">
+    
+    <!--Featured Image Area Start-->
+    <div class="featured-area">
+    	<div class="flexslider">
+        	<ul class="slides">
+            	{% for image in page.images %}
+                <!--Slide 1-->
+                <li>
+                	<a class="fancybox" data-fancybox-group="group" href="{{ "/images/posts/" | append: image | prepend: site.baseurl }}" >
+                    	<figure class="fit-img">
+                            <img src="{{ "/images/posts/" | append: image | prepend: site.baseurl }}" alt="featured image" />
+                        </figure>
+                    </a>
+                </li>
+                
+              {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <!--Featured Image Area End-->
+    
+    <!--Custom Navigation-->
+    <ul class="slide-nav">
+    	<li>
+        	<a class="slide-prev prev" href="prev"><i class="fa fa-angle-left"></i></a>
+        </li>
+        <li>
+        	<a class="slide-next next" href="next"><i class="fa fa-angle-right"></i></a>
+        </li>
+    </ul>
+<!--Custom Navigation End-->
+    
+    <!--Overlay Title Start-->
+    <div class="overlay-title">
+    	<div class="container">
+        	<h1>{{ page.title }}</h1>
+            <nav class="single-post-meta blog-post">
+            	<ul class="number">
+                	<li>
+                    	<span>Date</span>
+                        <a href="#">{{ page.date | date_to_string }}</a>
+                    </li>
+                    <li>
+                      <span>Jour</span> {{ page.day_which }}
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--Overlay Title End-->
+    
+</div>
+<!--Single Page Header End-->
+
+<!--Single Page Content Body Start-->
+<div class="page-sidebar" data-midnight="darkColor">
+	<div class="container nopadding">
+    	<div class="page-sidebar-wrapper">
+        	
+            <!--Content Section Start-->
+            <div class="content-wrapper">
+            	<div class="inner-wrapper">                	
+                    <p><span class="dropcap">{{ content | strip_html | truncate: 1,'' }}</span>
+                      {{ content  }}
+                    </p>
+                    
+                    <div class="divider3"></div>
+                    
+                    <!--Pagination Start-->
+                    <div class="row post-pagination">
+                    	{% if page.previous %}
+                    	<div class="col-sm-6 prev-post">
+                        	<div class="box">
+                        		<span>Precedent Post</span>
+                                <h4><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></h4>
+                            </div>
+                        </div>
+                      {% endif %}
+                      
+                      {% if page.next %}
+                      
+                        <div class="col-sm-6 next-post">
+                        	<div class="box">
+                        		<span>Post suivant</span>
+                                <h4><a href="{{ page.next.url }}">{{ page.next.title }}</a></h4>
+                            </div>
+                        </div>
+                      {% endif %}
+                      
+                    </div>
+                    <!--Pagination End-->
+                    
+                    <!--Post Author Start-->
+                    {% if page.zoom_on %}
+                    <div class="post-author">
+                      {% capture wiki_article %}{{ page.zoom_on }}{% endcapture %}
+                      {% wikipedia {{ wiki_article }} %}
+                    </div>
+                    {% endif %}
+                    <!--Post Author End-->
+                    
+                    
+                    <!--Post Comment Start-->
+                    
+                </div>
+            </div>
+            <!--Content Section End-->
+            
+            <div class="box-divider"></div>
+            
+            {% include sidebar.html %}
+            
+        </div>
+    </div>
+</div>
+<!--Single Page Content Body End-->
+
+
+

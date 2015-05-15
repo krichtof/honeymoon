@@ -1,0 +1,37 @@
+<!--Sidebar Section Start-->
+<div class="sidebar-wrapper">
+	<div class="inner-wrapper">
+    	
+        <!--Widget Recent Posts Start-->
+        <aside class="widget widget_recent_post">
+        	<h3 class="sidebar-title">Derniers Posts</h3>
+            
+            {% for post in site.posts limit:4 %}
+            <!--Recent Post 1-->
+            <div class="recent-wrap">
+            	<div class="recent-post-thumb">
+                	<a href="{{ post.url | prepend: site.baseurl }}">
+                    	<figure class="fit-img ripple">
+                        	<div class="thumbnail-hover"></div>
+                        	<img src="{{ "/images/posts/" | append: post.thumbnail | prepend: site.baseurl }}"  alt="recent post" />
+                        </figure>
+                    </a>
+                </div>
+                <div class="recent-post-detail">
+                	<h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+                    <div class="recent-description">
+                    	{{ post.excerpt | truncatewords: 15 }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!--End-->
+            
+            
+        </aside>
+        <!--Widget Recent Posts End-->
+        
+        
+    </div>
+</div>
+<!--Sidebar Section End-->
