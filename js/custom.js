@@ -456,8 +456,9 @@ jQuery(document).ready(function() {
 			directionNav: false,
 			slideshow: true,
 			animationSpeed: 800,
+			slideshowSpeed: 3000,
 			multipleKeyboard: true,
-			pauseOnHover: true
+			pauseOnHover: false
 		});
 		
 		$('.featured-area .flexslider').flexslider({
@@ -465,8 +466,9 @@ jQuery(document).ready(function() {
 			directionNav: false,
 			slideshow: true,
 			animationSpeed: 800,
+			slideshowSpeed: 3000,
 			multipleKeyboard: true,
-			pauseOnHover: true
+			pauseOnHover: false
 		});
 		
 		$('.slide-prev.prev, .slide-next.next').on('click', function(){
