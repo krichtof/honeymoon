@@ -12,3 +12,4 @@ timezone: Europe/Paris
 
 # Build settings
 markdown: kramdown
+exclude: [.sass-cache, .wikipedia-cache]
