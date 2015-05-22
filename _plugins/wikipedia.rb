@@ -95,6 +95,7 @@ module Jekyll
     def get_article_from_wikiweb(name)
       puts "before wiki find"
       page = Wikipedia.find(name, prop: "extracts|images", exintro: true)
+      page = Wikipedia.find(name, prop: "extracts|images", exintro: true, domain: "en.wikipedia.org") unless page.content
       #page = Wikipedia.find(name)
       puts "after wiki find"
       pages = JSON.parse(page.json)['query']['pages']
